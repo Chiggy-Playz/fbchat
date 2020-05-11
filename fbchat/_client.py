@@ -213,7 +213,7 @@ class Client(object):
                 if i >= max_tries:
                     raise
                 log.exception("Attempt #{} failed, retrying".format(i))
-                time.sleep(1)
+                time.sleep(10)
             else:
                 self.onLoggedIn(email=email)
                 break
